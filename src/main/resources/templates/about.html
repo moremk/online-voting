@@ -1,0 +1,59 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-MR" xml:lang="en-MR">  
+        <head>  
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />  
+        <meta http-equiv="content-language" content="en-MR" /> 
+    <head>  
+    </head>
+    <link rel="stylesheet" href="about.css">
+    <body>
+      <script>
+        function show()
+        {
+          const menu = document.getElementById("demo");
+          menu.style.display = menu.style.display === "block" ? "none" : "block";   
+        }
+    </script>
+    <div class="res">
+        <img src="/img/menu.png" class="i" onclick="show()">
+        <div class="demo" id="demo">        
+        <div class="nav">
+           <li><a th:href="@{/home}">Home</a></li>
+            <li><a th:href="@{/about}">About</a></li>
+            <li><a th:href="@{/govern}">GovernMent Scheme</a></li>
+            <li><a th:href="@{/voting}">Voting</a></li>
+            <li><a th:href="@{/login}"><button>LogOut</button></a></li>
+            </div>
+        </div>
+     
+        <img src="/img/logo.png" class="img">
+       
+      </div>
+    
+     
+<ul type="desc"> 
+<b>१] मतदानासाठी कोणती ओळखपत्र आणावे?</b><br>      
+<li style="padding:10px;margin-left:20px;color:black;margin-top:5px;">
+मतदानासाठी मतदार खाली नमूद केलेल्या ओळखपत्रांपैकी कोणतेही ओळखपत्र घेऊन जाऊ शकतात, फोटो व्होटर स्लिपसाठी स्वतंत्र ओळख दस्तऐवज म्हणून मतदान स्वीकारली जाणार नाही.<br>
+
+&nbsp; 1] EPIC (मतदार ओळखपत्र)<br>
+&nbsp; 2] पासपोर्ट<br>
+&nbsp; 3] ड्रायव्हिंग लायसन्स<br>
+&nbsp; 4] केंद्र/राज्य सरकार/पीएसयू/पब्लिक लिमिटेड कंपन्यांनी कर्मचाऱ्यांना जारी केलेल्या फोटोसह सेवा ओळखपत्रे<br>
+&nbsp; 5] बँक/पोस्ट ऑफिसने जारी केलेल्या फोटोसह पासबुक<br>
+&nbsp; 6] पॅन कार्ड<br>
+&nbsp; 7] NPR अंतर्गत RGI द्वारे जारी केलेले स्मार्ट कार्ड<br>
+&nbsp; 8] मनरेगा जॉब कार्ड (महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी)<br>
+&nbsp; 9] कामगार मंत्रालयाच्या योजनेअंतर्गत जारी केलेले आरोग्य विमा स्मार्ट कार्ड<br>
+&nbsp;10] छायाचित्रासह पेन्शन दस्तऐवज<br>
+&nbsp;11] खासदार/आमदार/एमएलसी यांना जारी केलेली अधिकृत ओळखपत्रे<br>
+&nbsp;12] आधार कार्ड<br>
+</li>
+</ul>
+<footer>
+    <br>
+   <p> &copy; 2024 Mahesh More. All rights reserved.</p>
+</footer>
+
+      </body>   
+</html>

@@ -1,0 +1,40 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>  
+    </head>
+    <link rel="stylesheet" href="home.css">
+    <body>
+      <script>
+        function show()
+        {
+          const menu = document.getElementById("demo");
+          menu.style.display = menu.style.display === "block" ? "none" : "block";   
+        }
+    </script>
+    <div class="res">
+        <img src="/img/menu.png" class="i" onclick="show()">
+        <div class="demo" id="demo">        
+        <div class="nav">
+             <li><a th:href="@{/ahome}">Home</a></li>
+            <li><a th:href="@{/aabout}">About</a></li>
+            <li><a th:href="@{/avoting}">Voting</a></li>
+            <li><a th:href="@{/result}">Result</a></li>
+            <li><a th:href="@{/admin}"><button>LogOut</button></a></li>
+            </div>
+        </div>
+     
+        <img src="/img/logo.png" class="img">
+       <img src="/img/el.jpeg"  class="el"> 
+      </div>
+     
+        <img src="/img/p1.jfif" class="vote"><img src="/img/p2.jfif"class="vote"><img src="/img/p3.jfif"class="vote"><br>
+        <img src="/img/p4.jfif"class="vote"><img src="/img/p1.jfif"class="vote"><img src="/img/p6.jfif"class="vote"><br>
+     
+        <footer>
+          <br>
+         <p> &copy; 2024 Mahesh More. All rights reserved.</p>
+      </footer>
+      
+      
+       
+      </body>   
+</html>

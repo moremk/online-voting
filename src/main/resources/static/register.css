@@ -1,0 +1,109 @@
+@charset "ISO-8859-1";
+
+.content
+{
+margin: 100px 0px 0px 300px;
+text-align: center;
+width:700px;
+max-width: 100%;
+height:400px;
+background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5));
+}
+.reg{
+    margin: -400px 0px 0px 350px;
+}
+header{
+    margin: -400px 0px 0px 00px;
+    padding: 20px;
+    color:red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+}
+input[type="text"]
+{
+    width:200px;
+    height:20px;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+input[type="password"]
+{
+    width:200px;
+    height:20px;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+input[type="text"]:hover{
+    border-color: red;
+}
+input[type="password"]:hover{
+    border-color: red;
+}
+input[type="submit"]
+{
+    width:220px;
+    height:40px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+}
+h1{
+   
+    color:red;
+
+    font-size: 20px;
+}
+a{
+    
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.img{
+    margin-left: -350px;
+    width:350px;
+    height:400px;
+
+}
+@media only screen and (max-width: 800px) {
+    .content{
+     margin: 100px 100px 100px 100px;
+      width:100%;
+
+      height: 700px;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .reg{
+      margin: 400px 300px 100px 50px;
+      width:70%;
+      
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .img{
+      margin-top:50px;
+      width:70%;
+      margin-left: 0px;
+      height: 200px;
+     
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    body{
+      margin: -50px 300px 100px 0px;
+      width:70%;
+      text-align: center;
+      
+      
+    }
+  }
+ 
+ 

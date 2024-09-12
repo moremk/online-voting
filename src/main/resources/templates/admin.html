@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<link rel="stylesheet" href="admin.css">
+    <body>
+      <a th:href="@{/login}"><button style="width:100px;color:white;border:none;outline:none;background-color:cornflowerblue;height:40px;">LOGIN USER</button></a>
+    <div class="content">
+    <header>ADMIN USER</header>
+    <form th:action="@{/admin}" method="post">
+    <i class="fa fa-user fa-lg" style="color:red;margin-left: -10px;background-color: #fff;text-align: center;"><input type="text" name="name" placeholder="Enter Username here.."></i><br></br>
+    <i class="fa fa-key fa-lg" style="color:red;margin-left: -10px;background-color: #fff;text-align: center;"><input type="password" name="pass" placeholder="Enter Password here.."></i><br></br>
+    <input type="submit" value="LOGIN"><br><br>
+    </form>
+    </div>
+    </body>
+</html>

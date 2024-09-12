@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-image:url("/img/regi.jpg");
+background-size: cover;
+}
+</style>
+</head>
+
+    <body>
+    <div class="content">
+    <img src="/img/vott.jpg" class="img">
+    <div class="reg">
+    <header>Register</header>
+    <form th:action="@{/register}" th:objet=${user} method="post">
+    <input type="text" name="name"placeholder="Enter UserName here.."class="form-control" required><br></br>
+    <input type="text" name="email" placeholder="Enter Email here.." class="form-control"required><br></br>
+    <input type="password" name="pass" placeholder="Enter Password here.." class="form-control"required><br></br>
+    <input type="submit" value="REGISTER"><br><br>
+    </form>
+    <h1>You Already have an Account?</h1><a th:href="@{/login}">LOGIN</a>
+</div>
+    </div>
+     <div th:if="${message}" th:text="${message}" style="margin-left:550px;text-align:center;padding-top:20px;margin-top:30px;color:white;width:200px;height:50px;background-color:green;"></div>
+    </body>
+</html>

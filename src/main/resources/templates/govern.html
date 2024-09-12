@@ -1,0 +1,69 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>  
+    </head>
+    <link rel="stylesheet" href="govern.css">
+    <body>
+      <script>
+        function show()
+        {
+          const menu = document.getElementById("demo");
+          menu.style.display = menu.style.display === "block" ? "none" : "block";   
+        }
+    </script>
+    <div class="res">
+        <img src="/img/menu.png" class="i" onclick="show()">
+        <div class="demo" id="demo">        
+        <div class="nav">
+           <li><a th:href="@{/home}">Home</a></li>
+            <li><a th:href="@{/about}">About</a></li>
+            <li><a th:href="@{/govern}">GovernMent Scheme</a></li>
+            <li><a th:href="@{/voting}">Voting</a></li>
+            <li><a th:href="@{/login}"><button>LogOut</button></a></li>
+            </div>
+        </div>
+     
+        <img src="/img/logo.png" class="img">
+      </div>
+     
+      <table border="1px solid gray">
+        <th>Srno.</th>
+        <th>Scheme</th>
+        <th>Apply</th>
+
+        <tr>
+            <td>1</td>
+            <td><img src="/img/l.jfif" style="border:1px solid blue;width:300px;"> </td>
+            <td><a href="https://ladakibahin.maharashtra.gov.in" style="color:blue">Apply</a></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td><img src="/img/r.jfif" style="border:1px solid blue;width:300px;"> </td>
+            <td><a href="https://www.rojgar.mahaswayam.gov.in" style="color:blue">Apply</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><img src="/img/d.jfif" style="border:1px solid blue;width:300px;"> </td>
+            <td><a href="https://mahadbt.maharashtra.gov.in" style="color:blue">Apply</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><img src="/img/s.jfif" style="border:1px solid blue;width:300px;"> </td>
+            <td><a href="https://pmvishwakarma.gov.in" style="color:blue">Apply</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><img src="/img/k.jfif" style="border:1px solid blue;width:300px;"> </td>
+            <td><a href="https://womenchild.maharashtra.gov.in/content/csr.php" style="color:blue">Apply</a></td>
+        </tr>
+      
+      </table>
+      <footer>
+        <br>
+       <p> &copy; 2024 Mahesh More. All rights reserved.</p>
+    </footer>
+      
+      
+       
+      </body>   
+</html>

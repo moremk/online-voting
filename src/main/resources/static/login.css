@@ -1,0 +1,84 @@
+@charset "ISO-8859-1";
+ body{
+
+background-image:url("/img/regi.jpg");
+background-size: cover;
+}
+.content
+{
+margin: 500px 0px 0px 300px;
+text-align: center;
+width:700px;
+max-width: 100%;
+height:400px;
+background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8));
+}
+header{
+margin: -400px 0px 0px 00px;
+padding: 20px;
+color:red;
+font-family: 'Times New Roman', Times, serif;
+font-size: 35px;
+}
+input[type="text"]
+{
+
+margin-left: 10px;
+width:200px;
+height:20px;
+border-radius: 5px;
+padding: 10px;
+outline: none;
+border: none;
+}
+input[type="password"]
+{
+margin-left: 10px;
+width:195px;
+height:20px;
+border-radius: 5px;
+padding: 10px;
+outline: none;
+border: none;
+}
+input[type="text"]:hover{
+border-color: red;
+}
+input[type="password"]:hover{
+border-color: red;
+}
+input[type="submit"]
+{
+  margin-right: 10px;
+width:250px;
+height:40px;
+border-radius: 5px;
+padding: 10px;
+background-color: red;
+color: white;
+outline: none;
+border: none;
+}
+h1{
+
+color:red;
+
+font-size: 20px;
+}
+a{
+
+color:white;
+text-decoration: none;
+font-size: 20px;
+}
+
+
+
+  @media only screen and (max-width: 800px) {
+  .content{
+   margin: 450px 100px 100px 50px;
+    width:80%;
+
+    height: 450px;
+  }
+}

@@ -1,0 +1,79 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>  
+    </head>
+    <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-MR" xml:lang="en-MR">  
+        <head>  
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />  
+        <meta http-equiv="content-language" content="en-MR" /> 
+    <link rel="stylesheet" href="voting.css">
+    <body>
+      <script>
+        function show()
+        {
+          const menu = document.getElementById("demo");
+          menu.style.display = menu.style.display === "block" ? "none" : "block";   
+        }
+        
+    </script>
+    <div class="res">
+        <img src="/img/menu.png" class="i" onclick="show()">
+        <div class="demo" id="demo">        
+        <div class="nav">
+          <li><a th:href="@{/ahome}">Home</a></li>
+            <li><a th:href="@{/aabout}">About</a></li>
+              <li><a th:href="@{/avoting}">Voting</a></li>
+            <li><a th:href="@{/result}">Result</a></li>
+            <li><a th:href="@{/admin}"><button>LogOut</button></a></li>
+            </div>
+        </div>
+     
+        <img src="/img/logo.png" class="img">
+      </div>
+      <div class="res">
+      <h>महाराष्ट्र मतदान केंद्र</h></div><br>
+      <img src="/img/f.jfif" class="mh"><img src="/img/balasaheb.jfif"class="mh"><br>
+    
+     <table border="1px">
+     <tr>
+        <th>क्रमांक</th>
+        <th>उमेदवाराचे नाव</th>
+        <th>निशाणी</th>
+        <th>बटन दाबा</th></tr>
+        <tr>
+            <td>1</td>
+            <td>देवेंद्र फडणवीस</td>
+            <td><img src="/img/lotus.png" style="width:100px;height:100px;"></td>
+    <td>
+        <form th:action="@{/vote}" th:object="${user}" method="post">
+            <input type="text"name="name" placeholder="enter Name"style='width:200px;height:30px;outline:none;border-radius:5px;border: 1px solid blue;'><br>
+            <input type="hidden" th:value="1" name="vote" style='width:10px;'>
+            <input type="submit" value="Vote" style="margin-left: 0px;">
+             <div th:if="${message}" th:text="${message}" style="margin-left:550px;text-align:center;padding-top:20px;margin-top:30px;color:white;width:200px;height:50px;background-color:green;"></div>
+        </form>
+    </td>
+</tr>
+        <tr>
+            <td>2</td>
+            <td>उद्धव ठाकरे</td>
+            <td><img src="/img/shiv.png" style="width:100px;height:100px;"></td>
+          
+    <td>
+        <form th:action="@{/vott}" th:object="${user}" method="post">
+            <input type="text"name="name"placeholder="enter Name" style='width:200px;height:30px;outline:none;border-radius:5px;border:1px solid blue;'><br>
+            <input type="hidden" th:value="1" name="vott"style='width:10px;'>
+            <input type="submit" value="Vote" style="margin-left: 0px;">
+             <div th:if="${message}" th:text="${message}" style="margin-left:550px;text-align:center;padding-top:20px;margin-top:30px;color:white;width:200px;height:50px;background-color:green;"></div>
+        </form>
+    </td>
+</tr>
+     </table>
+     <br> <br>
+     <footer>
+        <br>
+       <p> &copy; 2024 Mahesh More. All rights reserved.</p>
+    </footer>
+      
+      
+       
+      </body>   
+</html>

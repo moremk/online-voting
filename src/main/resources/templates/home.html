@@ -1,0 +1,97 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>  
+    </head>
+    <link rel="stylesheet" href="home.css">
+    <body>
+      <script>
+        function show()
+        {
+          const menu = document.getElementById("demo");
+          menu.style.display = menu.style.display === "block" ? "none" : "block";   
+        }
+    </script>
+    <div class="res">
+        <img src="/img/menu.png" class="i" onclick="show()">
+        <div class="demo" id="demo">        
+        <div class="nav">
+            <li><a th:href="@{/home}">Home</a></li>
+            <li><a th:href="@{/about}">About</a></li>
+            <li><a th:href="@{/govern}">GovernMent Scheme</a></li>
+            <li><a th:href="@{/voting}">Voting</a></li>
+            <li><a th:href="@{/login}"><button>LogOut</button></a></li>
+            </div>
+        </div>
+     
+        <img src="/img/logo.png" class="img">
+       <img src="/img/el.jpeg"  class="el">
+   
+        <img src="/img/p1.jfif" class="vote"><img src="/img/p2.jfif"class="vote"><img src="/img/p3.jfif"class="vote"><br>
+        <img src="/img/p4.jfif"class="vote"><img src="/img/p1.jfif"class="vote"><img src="/img/p6.jfif"class="vote"><br>
+        
+           <img src="/img/ai.avif" style="position:relative;margin-top:-50px;width:70px;height:70px;border-radius: 40px;font-size:30px; float:right;"onclick="myFunction()" >
+    <div class="dem" id="demm"> 
+    <div class="chat-container">
+       
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-controls">
+            <input type="text" id="user-input" placeholder="Type a message..." style="width:280px;height:50px;margin-top:19px;">
+            <button onclick="sendMessage()" style="width:80px;height:50px;margin-left:-60px;">Send</button>
+        </div>
+    </div>
+</div>
+</div>
+    <script>
+      function myFunction() {
+        const chatBox = document.getElementById("demm");
+        chatBox.style.display = chatBox.style.display === "block" ? "none" : "block";
+      }
+
+      function sendMessage() {
+        const input = document.getElementById('user-input');
+        const message = input.value.trim();
+        
+        if (message) {
+          appendMessage(message, 'user-message');
+          input.value = '';
+
+       
+          setTimeout(() => {
+            const botResponse = getBotResponse(message);
+            appendMessage(botResponse, 'bot-message');
+          }, 1000);
+        }
+      }
+
+      function appendMessage(message, className) {
+        const chatBox = document.getElementById('chat-box');
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', className);
+        messageDiv.textContent = message;
+        chatBox.appendChild(messageDiv);
+        chatBox.scrollTop = chatBox.scrollHeight; 
+      }
+
+      function getBotResponse(userMessage) {
+    
+        const responses = {
+          'hii': 'Hello!',
+          'how are you': 'I am good, thank you!',
+          'how to apply government schem': 'you first click on government schem menu and click on apply',
+          'how to voting': 'you first click on voting menu and enter name and click on vote button',
+          'which document bring to voting time': 'you first click on about menu and open all necessary document please read carefully and bring voting time',
+          'which time voting result will display': 'voting result display within 48 hours',
+          'by': 'Good by!',
+        };
+        return responses[userMessage.toLowerCase()] || "Sorry, I don't understand.";
+      }
+    </script>
+     
+        <footer>
+          <br>
+         <p> &copy; 2024 Mahesh More. All rights reserved.</p>
+      </footer>
+      
+      
+       
+      </body>   
+</html>
